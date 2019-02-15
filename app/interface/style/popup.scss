@@ -1,0 +1,166 @@
+@import "~bootstrap/scss/bootstrap";
+$font-family: 'Ubuntu Condensed', sans-serif;
+$theme-color: rgba(234, 32, 39,1.0);
+$text-color: #7b7b7b;
+$highlight-color: #b22222;
+
+* {
+ font-family: $font-family;
+}
+
+body,
+html {
+ font-size: 14px;
+}
+
+body {
+ background-image: url("../../assets/images/bg.jpg");
+}
+
+aside {
+ width: 15%;
+ padding: 5px 10px;
+ background: rgba(234, 32, 39,.7);
+
+ h5 {
+  color: #fff;
+ }
+}
+
+article {
+ width: 85%;
+}
+
+ol {
+ margin: 5px 0 0;
+ padding: 10px 0 0;
+ border-top: 2px dotted rgba($highlight-color,.5);
+
+ li {
+  cursor: pointer;
+  text-transform: lowercase;
+  list-style: none;
+  color: #fff;
+
+  &:hover {
+   color: $highlight-color;
+  }
+ }
+}
+
+.card-block {
+ height: calc(100vh - 38px);
+ overflow: auto;
+}
+
+.card {
+ background-color: #f5f5f5;
+
+ .card-body {
+  color: $text-color;
+  padding: 10px;
+
+  h4,
+  p {
+   text-overflow: ellipsis;
+   width: 100%;
+   overflow: hidden;
+   text-transform: lowercase;
+   white-space: nowrap;
+  }
+
+  h4 {
+   font-size: 14px;
+  }
+
+  p {
+   font-size: 12px;
+   color: $theme-color;
+  }
+
+  span {
+   display: block;
+  }
+
+  img {
+   border-radius: 50%;
+   overflow: hidden;
+   width: 30px;
+   filter: grayscale(100%);
+   height: 30px;
+  }
+
+  &:hover {
+   img {
+    filter: grayscale(0%);
+   }
+  }
+ }
+}
+
+.top-bar {
+ padding: 0 15px;
+ margin-bottom: 10px;
+
+ .input-group-text {
+  background: none;
+  border: 0;
+  color: $theme-color;
+ }
+
+ h5 {
+  width: 20%;
+ }
+
+ input {
+  width: 60%;
+  height: 28px;
+  background: none;
+  border: 0;
+  color: $highlight-color;
+  background: none;
+  border-radius: 0;
+  text-transform: lowercase;
+
+  &:focus {
+   color: $highlight-color;
+   background: none;
+   outline: none;
+   box-shadow: none;
+  }
+ }
+}
+
+h5 {
+ color: $highlight-color;
+ font-size: 12px;
+ text-transform: lowercase;
+ margin-bottom: 0;
+}
+
+.no-content {
+ text-align: center;
+
+ img {
+  opacity: 0.8;
+ }
+
+ p {
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 3px 3px rgba(255,255,255,0.5);
+  text-align: center;
+  font-size: 24px;
+ }
+}
+
+.btn-link {
+ color: #7b7b7b;
+
+ &:hover {
+  color: $theme-color;
+ }
+}
